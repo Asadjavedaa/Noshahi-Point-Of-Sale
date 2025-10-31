@@ -1,0 +1,756 @@
+/* --- Global Styles and Variables --- */
+:root {
+    --hulm-green: #00A693; /* The main Hulm brand green */
+    --hulm-dark-green: #007D6F;
+    --hulm-text: #212529;
+    --hulm-light-bg: #E0F2F1; /* Light green/mint background */
+    --white: #fff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #495057;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--hulm-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Reusable Components */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--hulm-green);
+    color: var(--white);
+    border: 2px solid var(--hulm-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--hulm-dark-green);
+    border-color: var(--hulm-dark-green);
+}
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--hulm-green);
+    border: 2px solid var(--hulm-green);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--hulm-green);
+    border: 2px solid var(--hulm-green);
+}
+
+.large-btn {
+    padding: 12px 30px;
+    font-size: 1.1em;
+}
+
+.section-title {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--hulm-green);
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    font-size: 1.1em;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+}
+
+.large-text {
+    font-size: 2.2em;
+    color: var(--hulm-text);
+}
+
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--hulm-green);
+}
+
+.logo-icon {
+    height: 30px; /* Placeholder icon size */
+    margin-right: 5px;
+}
+
+.tagline {
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--dark-gray);
+    align-self: flex-end;
+    margin-bottom: 5px;
+    margin-left: -40px; /* Overlap with 'Hulm' */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--hulm-green);
+}
+
+.main-nav i {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.header-actions button:first-child {
+    margin-right: 10px;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background-color: var(--hulm-light-bg);
+    /* Pattern background effect approximation */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.1"><circle cx="50" cy="50" r="10" fill="%2300A693"/></svg>');
+    background-size: 50px 50px;
+    padding: 80px 0;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: var(--hulm-text);
+}
+
+.hero-text h2 {
+    font-size: 2.5em;
+    font-weight: 600;
+    color: var(--hulm-green);
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.ratings {
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.ratings .stars {
+    color: gold;
+    font-size: 1.2em;
+}
+
+.hero-buttons button {
+    margin-right: 15px;
+}
+
+.hero-image {
+    position: relative;
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.free-trial-badge {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    background-color: #F74444; /* Red color for the badge */
+    color: var(--white);
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    transform: rotate(10deg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-width: 100px;
+}
+.free-trial-badge strong {
+    display: block;
+    font-size: 1.2em;
+}
+
+/* --- About Hulm POS (Capture2.PNG) --- */
+.about-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-text h2 {
+    font-size: 2.5em;
+    color: var(--hulm-green);
+    margin-bottom: 25px;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.about-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.graphic-placeholder {
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(45deg, var(--hulm-green), var(--hulm-light-bg));
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    text-align: center;
+    font-size: 1.5em;
+}
+.graphic-placeholder i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* --- Features and Benefits (Capture3.PNG, Capture4.PNG) --- */
+.features-benefits-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.feature-cards-slider {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    overflow-x: auto; /* For the slider effect */
+    padding-bottom: 20px;
+    margin-bottom: 80px;
+}
+
+.feature-card {
+    background-color: var(--white);
+    border: 1px solid var(--hulm-green);
+    border-radius: 10px;
+    padding: 40px 20px;
+    width: 350px;
+    flex-shrink: 0;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature-icon {
+    font-size: 3em;
+    color: var(--hulm-green);
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    color: var(--hulm-green);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.benefits-wrap {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    text-align: left;
+}
+
+.benefits-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.benefits-list {
+    flex: 1;
+}
+
+.benefits-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.benefits-list li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.benefits-list li i {
+    color: var(--hulm-green);
+    margin-right: 10px;
+}
+
+/* --- Dashboard Mockup (Capture5.PNG) --- */
+.dashboard-mockup-section {
+    padding: 80px 0;
+    background-color: var(--hulm-light-bg);
+    text-align: center;
+}
+
+.mockup-images {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.mockup-img {
+    width: 45%;
+    max-width: 550px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 5px solid var(--white);
+}
+
+/* --- Why Choose (Capture6.PNG) --- */
+.why-choose-section {
+    padding: 80px 0;
+}
+
+.why-choose-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.why-choose-text {
+    flex: 2;
+}
+
+.why-choose-text h3 {
+    color: var(--hulm-green);
+    margin: 25px 0 15px;
+}
+
+.why-choose-graphic {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.key-points-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.key-points-grid p {
+    font-size: 0.9em;
+}
+
+/* --- Industries We Serve (Capture7.PNG) --- */
+.industries-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--hulm-light-bg); /* Use the same light background as the image */
+}
+
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.industry-item {
+    padding: 20px 10px;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.industry-item:hover {
+    transform: translateY(-5px);
+}
+
+.industry-icon {
+    font-size: 2.5em;
+    color: var(--hulm-green);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.industry-item p {
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* --- FBR Compliance (Capture8.PNG) --- */
+.fbr-compliance-section {
+    padding: 80px 0;
+}
+
+.compliance-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.compliance-text {
+    flex: 1;
+}
+
+.compliance-text ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.compliance-text li {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.compliance-text li i {
+    color: var(--hulm-green);
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.compliance-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.compliance-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Footer and Widgets --- */
+.main-footer {
+    background-color: var(--hulm-text);
+    color: var(--white);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--hulm-green);
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.language-selector {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: var(--hulm-text);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    z-index: 1000;
+}
+.language-selector i {
+    margin-right: 5px;
+}
+
+/* --- Media Queries (Responsiveness) --- */
+@media (max-width: 1024px) {
+    .industries-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .main-nav a {
+        margin: 0 10px;
+        display: inline-block;
+        font-size: 0.9em;
+    }
+    .hero-content, .about-content, .benefits-wrap, .why-choose-content, .compliance-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-text, .hero-image {
+        max-width: 100%;
+    }
+    .benefits-list, .compliance-text {
+        text-align: left;
+    }
+    .benefits-wrap .benefits-graphic {
+        order: -1; /* Move graphic above text on small screens */
+    }
+    .key-points-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mockup-images {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mockup-img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 2.2em;
+    }
+    .hero-text h2 {
+        font-size: 1.8em;
+    }
+    .industries-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .feature-cards-slider {
+        justify-content: flex-start;
+    }
+    .key-points-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .hero-buttons button {
+        margin-right: 0;
+    }
+}
+/* --- Detailed Footer (Capture9.PNG) --- */
+.main-footer-detailed {
+    background-color: var(--hulm-text); /* Dark background from image */
+    color: var(--white);
+    padding: 60px 0 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column {
+    flex-basis: 20%; /* Distribute columns roughly evenly */
+    min-width: 150px;
+}
+
+.footer-logo-social {
+    flex-basis: 25%;
+}
+
+.footer-logo-social h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--hulm-green); /* Highlight brand name */
+}
+
+.social-icons a {
+    color: var(--white);
+    font-size: 1.2em;
+    margin-right: 15px;
+    transition: color 0.2s;
+}
+
+.social-icons a:hover {
+    color: var(--hulm-green);
+}
+
+.badges {
+    margin-top: 25px;
+}
+
+/* Placeholder styling for badges (Google, FBR, Trustpilot) */
+.google-badge, .fbr-badge, .trustpilot-badge {
+    width: 120px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-column h3 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--hulm-green); /* Heading color */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: var(--hulm-green);
+}
+
+.contact-info p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+.contact-info strong {
+    color: var(--hulm-green);
+    margin-right: 5px;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.footer-bottom .lang-selector {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* --- Responsive Adjustments for Footer --- */
+@media (max-width: 992px) {
+    .footer-grid {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .footer-column {
+        flex-basis: 45%; /* Two columns on smaller screens */
+        margin-bottom: 30px;
+    }
+    .footer-logo-social {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .social-icons {
+        margin-bottom: 20px;
+    }
+    .badges {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-column {
+        flex-basis: 100%; /* Single column on mobile */
+        text-align: center;
+    }
+    .footer-column ul {
+        text-align: center;
+    }
+    .contact-info {
+        text-align: center;
+    }
+    .badges {
+        flex-direction: column;
+        align-items: center;
+    }
+}

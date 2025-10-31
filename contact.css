@@ -1,0 +1,542 @@
+:root {
+    --hulm-primary: #007FFF; /* Deep Blue */
+    --hulm-text: #212529; /* Dark text */
+    --hulm-light-bg: #f8f9fa; /* Light Gray background */
+    --hulm-dark-gray: #495057;
+    --white: #fff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--hulm-text);
+    background-color: var(--white);
+    line-height: 1.6;
+    margin: 0;
+    padding: 50px 0;
+}
+
+.contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    background-color: var(--white);
+}
+/* --- Global Variables (Original Teal/Mint Green Color Scheme) --- */
+:root {
+    --hulm-primary: #00A389; /* Original Teal/Mint Green */
+    --hulm-dark-primary: #007D6D; /* Darker Teal for hover */
+    --hulm-light-bg: #E6F8F6; /* Very light background for hero/sections */
+    --hulm-text: #212529;
+    --white: #fff;
+    --dark-gray: #495057;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* --- Reusable Button Styles --- */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--hulm-primary); /* TEAL GREEN */
+    color: var(--white);
+    border-color: var(--hulm-primary); /* TEAL GREEN */
+}
+
+.btn-primary:hover {
+    background-color: var(--hulm-dark-primary); /* DARKER TEAL */
+    border-color: var(--hulm-dark-primary); /* DARKER TEAL */
+}
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--hulm-primary); /* TEAL GREEN */
+    border-color: var(--hulm-primary); /* TEAL GREEN */
+}
+
+.btn-outline:hover {
+    background-color: var(--hulm-primary); /* TEAL GREEN */
+    color: var(--white);
+}
+
+/* --- Header & Navigation Specific Styles --- */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+/* Logo Styling */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--hulm-primary); /* TEAL GREEN */
+    text-decoration: none;
+    position: relative;
+    padding-right: 20px;
+}
+
+.logo-icon {
+    height: 30px;
+    margin-right: 5px;
+    font-size: 1.2em;
+}
+
+.tagline {
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--dark-gray);
+    position: absolute;
+    bottom: -10px;
+    right: 0;
+    white-space: nowrap;
+}
+
+/* Navigation Links Styling */
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+    white-space: nowrap;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--hulm-primary); /* TEAL GREEN */
+}
+
+.main-nav i {
+    font-size: 0.7em;
+    margin-left: 5px;
+}
+
+/* Action Buttons Positioning */
+.header-actions button:first-child {
+    margin-right: 10px;
+}
+/* --- Global Variables (Green/Teal Color Scheme) --- */
+:root {
+    --hulm-green: #00A693; /* The main Hulm brand green */
+    --hulm-text: #212529; /* Dark text/Footer background color */
+    --white: #fff;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+/* --- Detailed Footer Styles (Matching Capture9.PNG) --- */
+.main-footer-detailed {
+    background-color: var(--hulm-text); /* Dark background from image */
+    color: var(--white);
+    font-family: var(--font-primary);
+    padding: 60px 0 0;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-column {
+    flex-basis: 20%; 
+    min-width: 150px;
+}
+
+.footer-logo-social {
+    flex-basis: 25%;
+}
+
+.footer-logo-social h2 {
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--hulm-green); /* Highlight brand name in Green */
+}
+
+/* Social Icons */
+.social-icons a {
+    color: var(--white);
+    font-size: 1.2em;
+    margin-right: 15px;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: var(--hulm-green);
+}
+
+.badges {
+    margin-top: 25px;
+}
+
+/* Placeholder styling for badges (Google, FBR, Trustpilot) */
+.google-badge, .fbr-badge, .trustpilot-badge {
+    width: 120px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8em;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Column Headings and Links */
+.footer-column h3 {
+    font-size: 1em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--hulm-green); /* Heading color in Green */
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+
+.footer-column ul li a:hover {
+    color: var(--hulm-green);
+}
+
+/* Contact Info */
+.contact-info p {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+.contact-info strong {
+    color: var(--hulm-green);
+    margin-right: 5px;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+.footer-bottom .lang-selector {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* --- Floating Widgets --- */
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--hulm-green);
+    color: var(--white);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.language-selector {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background-color: var(--hulm-text);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    z-index: 1000;
+}
+.language-selector i {
+    margin-right: 5px;
+}
+
+
+/* --- Responsive Adjustments for Footer --- */
+@media (max-width: 992px) {
+    .footer-grid {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .footer-column {
+        flex-basis: 45%; /* Two columns on smaller screens */
+        margin-bottom: 30px;
+    }
+    .footer-logo-social {
+        flex-basis: 100%;
+        text-align: center;
+    }
+    .social-icons {
+        margin-bottom: 20px;
+    }
+    .badges {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-column {
+        flex-basis: 100%; /* Single column on mobile */
+        text-align: center;
+    }
+    .footer-column ul {
+        text-align: center;
+    }
+    .contact-info {
+        text-align: center;
+    }
+    .badges {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* --- Media Queries for Responsiveness (Same as before) --- */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .logo {
+        margin-bottom: 10px;
+        font-size: 1.5em;
+        padding-right: 0;
+    }
+    .tagline {
+        position: static;
+        display: block;
+        margin: 0 0 10px;
+        font-size: 0.6em;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid #f0f0f0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    .main-nav a {
+        margin: 0 8px;
+        display: inline-block;
+        font-size: 0.85em;
+    }
+    .header-actions {
+        order: 2;
+        margin-left: auto;
+    }
+    .header-actions button {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
+/* --- Form Section Styling --- */
+.contact-form-section {
+    flex: 2; /* Takes up more space */
+}
+
+.main-heading {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--hulm-text);
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-row {
+    display: flex;
+    gap: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Ensure the two-column inputs take half width each */
+.form-row .form-group {
+    flex: 1; 
+}
+
+.form-group.full-width {
+    width: 100%;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--hulm-text);
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--hulm-primary);
+    outline: none;
+    box-shadow: 0 0 0 1px var(--hulm-primary);
+}
+
+textarea {
+    resize: vertical;
+}
+
+.btn-submit {
+    align-self: flex-start;
+    padding: 12px 30px;
+    margin-top: 10px;
+    background-color: var(--hulm-primary);
+    color: var(--white);
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #0059B3; /* Darker Blue */
+}
+
+/* --- Info Section Styling --- */
+.contact-info-section {
+    flex: 1; /* Takes up less space */
+    padding-top: 50px; /* Align with form content */
+}
+
+.info-heading {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--hulm-text);
+}
+
+.info-subtitle {
+    color: var(--hulm-dark-gray);
+    margin-bottom: 40px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contact-icon {
+    font-size: 1.5em;
+    color: var(--hulm-primary);
+    margin-right: 15px;
+    min-width: 30px; /* Ensure icons align */
+    text-align: center;
+}
+
+.contact-label {
+    font-weight: 600;
+    color: var(--hulm-primary);
+    margin-bottom: 3px;
+}
+
+.contact-value {
+    font-size: 0.95em;
+    color: var(--hulm-text);
+}
+.contact-value.address {
+    line-height: 1.4;
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    .contact-form-section, .contact-info-section {
+        flex: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-container {
+        padding: 20px;
+    }
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+    .main-heading {
+        font-size: 2em;
+    }
+    .info-heading {
+        margin-top: 20px;
+    }
+    .btn-submit {
+        width: 100%;
+    }
+}

@@ -1,0 +1,592 @@
+/* Import Font Awesome for checkmarks and icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+/* --- Variables and General Styles --- */
+:root {
+    --teal-dark: #3a8a81; /* Dark Teal for CTA2 background and titles */
+    --teal-light: #6ac4b8; /* Lighter Teal for CTA3 background (Capture20) */
+    --dark-grey: #3c3c3c; /* Dark background for CTA1 (Capture15) */
+    --light-bg: #ffffff;
+    --read-more-green: #6ac4b8; /* Green/Teal for Read More links */
+    --text-color: #555;
+    --white: #ffffff;
+
+    /* Footer Variables (re-added for completeness) */
+    --footer-dark-bg: #222222; 
+    --footer-bottom-bg: #2a2a2a;
+    --link-color: #bbbbbb;
+    --meta-color: #999999;
+}
+/* --- Global Styles and Variables --- */
+:root {
+    --hulm-green: #00A693; /* The main Hulm brand green */
+    --hulm-dark-green: #007D6F;
+    --hulm-text: #212529;
+    --hulm-light-bg: #E0F2F1; /* Light green/mint background */
+    --white: #fff;
+    --light-gray: #f8f9fa;
+    --dark-gray: #495057;
+    --font-primary: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--hulm-text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Reusable Button Components */
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-primary {
+    background-color: var(--hulm-green);
+    color: var(--white);
+    border: 2px solid var(--hulm-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--hulm-dark-green);
+    border-color: var(--hulm-dark-green);
+}
+
+.btn-outline {
+    background-color: var(--white);
+    color: var(--hulm-green);
+    border: 2px solid var(--hulm-green);
+}
+
+/* --- Header & Navigation --- */
+.main-header {
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--hulm-green);
+}
+
+.logo-icon {
+    height: 30px; /* Placeholder icon size */
+    margin-right: 5px;
+}
+
+.tagline {
+    font-size: 0.5em;
+    font-weight: 400;
+    color: var(--dark-gray);
+    align-self: flex-end;
+    margin-bottom: 5px;
+    margin-left: -40px; /* Overlap with 'Hulm' */
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    margin: 0 15px;
+    font-weight: 600;
+    transition: color 0.2s;
+}
+
+.main-nav a:hover, .main-nav a.active {
+    color: var(--hulm-green);
+}
+
+.main-nav i {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.header-actions button:first-child {
+    margin-right: 10px;
+}
+
+/* --- Media Queries (Responsiveness) for Header --- */
+@media (max-width: 992px) {
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .main-nav {
+        order: 3;
+        width: 100%;
+        text-align: center;
+        padding-top: 10px;
+    }
+    .main-nav a {
+        margin: 0 10px;
+        display: inline-block;
+        font-size: 0.9em;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.teal-title {
+    color: var(--teal-dark); /* Dark Teal for light backgrounds */
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+/* ** NEW CLASS: For white headings on dark backgrounds ** */
+.white-title {
+    color: var(--white);
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.section-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-top: 30px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+/* --- CTA Banners Styles --- */
+.cta-banner {
+    padding: 60px 20px;
+}
+
+.dark-bg-cta {
+    background-color: var(--dark-grey);
+    color: var(--white);
+}
+
+.dark-bg-cta h1, .dark-bg-cta p {
+    color: var(--white);
+    margin-bottom: 25px;
+}
+
+.teal-bg-cta {
+    background-color: var(--teal-light);
+    color: var(--white);
+    text-align: center;
+}
+
+.teal-bg-cta .teal-title {
+    color: var(--white); /* This specific override is fine for the subtitle */
+    font-weight: 500;
+}
+
+.teal-bg-cta .teal-subtitle {
+    max-width: 900px;
+    margin: 15px auto 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.teal-dark-bg-cta {
+    background-color: var(--teal-dark);
+    color: var(--white);
+    text-align: center;
+    background-image: url('background-graphic.png'); /* Placeholder for the faint background graphic */
+    background-size: cover;
+    background-position: right center;
+}
+
+.cta-heading-erp {
+    color: var(--white); /* Ensure this is white for the dark teal background */
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+/* Button Styles */
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Style for Capture15 buttons */
+.btn-primary {
+    background-color: var(--read-more-green);
+    color: var(--white);
+    border: 2px solid var(--read-more-green);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+    opacity: 0.9;
+}
+
+/* Style for Capture20 buttons */
+.btn-primary-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+
+.btn-secondary-outline {
+    background-color: transparent;
+    color: var(--white);
+    border: 2px solid var(--white);
+}
+.btn-primary-outline:hover, .btn-secondary-outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- INDUSTRY CARDS SECTION (Capture17) --- */
+.industry-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.industry-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.industry-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(100%); /* Simulating the B&W/filtered look in the image */
+    transition: filter 0.3s;
+}
+
+.industry-card:hover .card-image {
+    filter: grayscale(0%); /* Optional: Colorize on hover */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: var(--teal-dark);
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+.card-content p {
+    font-size: 0.95em;
+    min-height: 70px; /* Ensures consistent card height */
+}
+
+.read-more {
+    color: var(--read-more-green);
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Hulm POS Industries Details (Capture16) */
+.hulm-industries-details {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+.industry-text-block {
+    flex: 1;
+}
+
+.industry-list-grid {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+.industry-list-grid ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.industry-list-grid li {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.industry-list-grid i {
+    color: var(--read-more-green);
+    margin-right: 8px;
+}
+
+.industry-graphic {
+    flex: 1;
+    text-align: right;
+    /* In a real project, this would contain the image or SVG */
+}
+
+/* --- FAQ SECTION (Capture19) --- */
+.faq-accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--white);
+    border: none;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-color);
+    outline: none;
+    /* Add indicator for open/close using JS class or background image */
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    background-color: #f9f9f9;
+}
+
+.faq-answer p {
+    padding: 0 15px;
+    margin: 0;
+    line-height: 1.5;
+    font-size: 0.95em;
+}
+
+/* Class added by JS when an item is open */
+.faq-item.open .faq-answer {
+    max-height: 200px; /* Should be larger than content height */
+    padding: 15px;
+}
+/* --- FOOTER STYLES --- */
+.site-footer {
+    background-color: var(--footer-dark-bg);
+    color: var(--text-color);
+    padding-top: 40px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Row (Logo, Social, Ratings) */
+.footer-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+    color: var(--white); /* **CORRECTED: Logo was previously dark on dark background** */
+}
+
+.footer-social-ratings {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-social a {
+    color: var(--text-color);
+    font-size: 1.2em;
+    margin-left: 15px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-social a:hover {
+    color: var(--link-color);
+}
+
+.footer-ratings-badges img {
+    height: 30px; /* Adjust size of rating logos */
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Main Content Columns */
+.footer-content-columns {
+    display: grid;
+    /* 4 columns on large screens */
+    grid-template-columns: 2fr 1.5fr 1fr 1.5fr; 
+    gap: 30px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-links-group h4, .footer-contact h4 {
+    font-size: 1.1em;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: var(--white); /* Ensure headings are white */
+}
+
+.footer-links-group ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links-group a {
+    color: var(--link-color);
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    font-size: 0.9em;
+    transition: color 0.2s;
+}
+
+.footer-links-group a:hover {
+    color: var(--text-color);
+}
+
+.footer-contact p, .footer-contact address {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: var(--link-color);
+    font-style: normal;
+}
+
+/* Footer Bottom Bar */
+.footer-bottom {
+    background-color: var(--footer-bottom-bg);
+    padding: 15px 20px;
+    margin-top: 40px;
+    font-size: 0.8em;
+    color: var(--meta-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom .legal-links a {
+    color: var(--meta-color);
+    text-decoration: none;
+    margin-right: 20px;
+    transition: color 0.2s;
+}
+
+.footer-bottom .legal-links a:hover {
+    color: var(--text-color);
+}
+
+.language-selector {
+    display: flex;
+    align-items: center;
+}
+
+.language-selector img {
+    width: 18px;
+    height: auto;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* --- Media Queries for Responsiveness --- */
+@media (max-width: 900px) {
+    .hulm-industries-details {
+        flex-direction: column;
+        text-align: center;
+    }
+    .industry-graphic {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .teal-title, .cta-heading-erp {
+        font-size: 2em;
+    }
+    .industry-card-grid {
+        grid-template-columns: 1fr;
+    }
+    .industry-list-grid {
+        flex-direction: column;
+    }
+    .card-content p {
+        min-height: auto; /* Remove fixed height on small screens */
+    }
+}
